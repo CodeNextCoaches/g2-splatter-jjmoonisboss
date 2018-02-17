@@ -3,7 +3,47 @@
 /*
  * setup()
  */
+var canvas;
+var canvasWidth=500;
+var canvasHeight=400;
+var button;
+var slider;
+var spread;
+var justPop= random(10,15)
 
+
+function setup(){
+  canvas=createCanvas(canvasWidth,canvasHeight);
+  canvas.parent("canvas-area");
+  canvas.mousePressed(drawEllipse);
+  background(77,199,253);
+  button=select("#clear-button");
+  button.mousePressed(setup);
+  slider=select(#slider);
+  slider.input(updateSpread);
+  updateSpread();
+  
+}
+
+
+function drawEllipse(){
+  fill("#fdab94");
+  ellipse(mouseX,mouseY,100,100);
+  noStroke();
+}
+function updateSpread{
+  spread=slider(value);
+}
+
+function drawSplatter(){
+  random(10,15);
+  fill(random(0,255)(0,255)(0,255));
+  noStroke();
+  for (var justPop i =0 ;  i < var justPop; i++) {
+    var justPop=(5,15);
+    ellipse(random(mouseX-spread,mouseX+spread,mouseY-spread,mouseY+spread));
+  }
+}
 
 /*
  * drawEllipse()
